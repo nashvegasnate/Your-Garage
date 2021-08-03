@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Your_Garage.Vehicle;
 
 namespace Your_Garage
 {
-    class Car
+    abstract class Car : VehicleBase
     {
-        public int FuelCapacity { get; set; }
-        public string Color { get; set; }
-        public int PassengerOccupancy { get; set; }
-
-        public void Refuel()
+        public Car(string color, int passengerOccupancy)
         {
-
+            FuelCapacity = 30;
+            PassengerOccupancy = passengerOccupancy;
+            Color = color;
         }
-        public void Drive()
-        {
 
+        public void Go()
+        {
+            Console.WriteLine($"Driving the car.");
         }
-        public void Brake()
+        public void Stop()
         {
-
+            Console.WriteLine($"Applying the brakes now.");
         }
 
     }

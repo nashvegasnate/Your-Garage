@@ -21,6 +21,9 @@ namespace Your_Garage
             planeList.Add(fokker);
             planeList.Add(boeing);
 
+            // Build a collection of all vehicles that operate on roads
+            // With a single `foreach`, have each road vehicle Drive()
+
             List<Car> carList = new List<Car>();
             var bentley = new MyRide("orange");
             var jeep = new MyRide("olive green");
@@ -28,6 +31,9 @@ namespace Your_Garage
             carList.Add(bentley);
             carList.Add(jeep);
             carList.Add(porsche);
+
+            // Build a collection of all vehicles that operate on water
+            // With a single `foreach`, have each water vehicle Drive()
 
             List<Watercraft> boatList = new List<Watercraft>();
             var malibu = new Boat("green");
@@ -39,11 +45,9 @@ namespace Your_Garage
 
 
 
-            // Build a collection of all vehicles that operate on roads
-            // With a single `foreach`, have each road vehicle Drive()
+            
 
-            // Build a collection of all vehicles that operate on water
-            // With a single `foreach`, have each water vehicle Drive()
+            
         }
     }
 }
