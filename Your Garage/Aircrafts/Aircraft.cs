@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Your_Garage.Vehicle;
 
 namespace Your_Garage
 {
-    class Aircraft
+    abstract class Aircraft : VehicleBase
     {
-        public int FuelCapacity { get; set; }
-        public string Color { get; set; }
-        public int PassengerOccupancy { get; set; }
+        
+        public string Name { get; set; }
 
-        public void Refuel()
+        public Aircraft(string name)
         {
-
+            FuelCapacity = 300;
+            Color = "Red";
+            PassengerOccupancy = 25;
         }
-        public void Fly()
-        {
 
+        public override void Go()
+        {
+            Console.WriteLine($"We flew out of Nashville on my {Name} around noon and are headed to Orlando.");
         }
-        public void Land()
+        public override void Stop()
         {
-
+            Console.WriteLine($"We landed just in time and only used about half of our {FuelCapacity}-gallon tank of fuel.");
         }
     }
 }

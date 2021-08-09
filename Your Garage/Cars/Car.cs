@@ -9,6 +9,7 @@ namespace Your_Garage
 {
     abstract class Car : VehicleBase
     {
+
         public Car(string color, int passengerOccupancy)
         {
             FuelCapacity = 30;
@@ -16,11 +17,11 @@ namespace Your_Garage
             Color = color;
         }
 
-        public void Go()
+        public override void Go()
         {
             Console.WriteLine($"Driving the car.");
         }
-        public void Stop()
+        public override void Stop()
         {
             Console.WriteLine($"Applying the brakes now.");
         }

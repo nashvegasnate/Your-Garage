@@ -3,22 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Your_Garage.Vehicle;
 
 namespace Your_Garage
 {
-    class Watercraft
+    abstract class Watercraft : VehicleBase
     {
-        public int FuelCapacity { get; set; }
-        public string Color { get; set; }
-        public int PassengerOccupancy { get; set; }
+        public string Name { get; set; }
 
+        public Watercraft(string name)
+        {
+            Name = $"The Royal {name}";
+            FuelCapacity = 80;
+            Color = "orange";
+            PassengerOccupancy = 12;
+        }
+       
+        public override void Go()
+        {
+            Console.WriteLine($"We will venture out on my ship, {Name}.");
+        }
         public void Refuel()
         {
-
-        }
-        public void Drive()
-        {
-
+            Console.WriteLine($"{Name} is running low on gas, so we'll need to refuel soon.");
         }
     }
 }

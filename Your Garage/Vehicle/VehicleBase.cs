@@ -11,13 +11,14 @@ namespace Your_Garage.Vehicle
         public int FuelCapacity { get; set; }
         public string Color { get; set; }
         public int PassengerOccupancy { get; set; }
-    }
 
-    public virtual void Refuel()
-    {
-        Console.WriteLine("Getting gas!");
-    }
 
-    public abstract void Go();
-    public abstract void Stop();
+        public virtual void Refuel()
+        {
+            Console.WriteLine("Getting gas!");
+        }
+
+        public abstract void Go();
+        public abstract void Stop();
+    }
 }
