@@ -18,11 +18,13 @@ namespace Your_Garage
             Color = "orange";
             PassengerOccupancy = 12;
         }
-       
+
         public override void Go()
         {
             Console.WriteLine($"We will venture out on my ship, {Name}.");
         }
+
+
         public void Refuel()
         {
             Console.WriteLine($"{Name} is running low on gas, so we'll need to refuel soon.");

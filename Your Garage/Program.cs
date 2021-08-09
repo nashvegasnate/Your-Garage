@@ -51,6 +51,7 @@ namespace Your_Garage
             {
                 boat.Go();
                 boat.Stop();
+                boat.Refuel();
             }
             
 
